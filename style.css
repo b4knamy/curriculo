@@ -199,7 +199,7 @@ footer {
     }
     footer {
         flex-direction: column;
-        gap: 10px;
+        gap: 7px;
     }
     footer span, a {
         font-size: 12px;
