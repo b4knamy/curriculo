@@ -112,14 +112,15 @@ nav a:hover {
 }
 .container {
     color: white;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     background-color: rgba(46, 27, 27, 0.6);
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 15px black;
     border-radius: 20px;
+    padding: 20px;
 }
 .container:hover {
     transform: scale(1.1);
@@ -133,6 +134,18 @@ nav a:hover {
     transform: scale(1.05);
     color: blue;
     transition: all 100ms linear;
+}
+.container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.container div ul {
+    position: relative;
+    right: 20px;
+}
+.obs p {
+    font-size: 12px;
 }
 
 
