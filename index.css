@@ -1,0 +1,527 @@
+:root {
+    --background-color: rgb(42, 10, 54);
+    --background-gradient: black;
+}
+html {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Abel", sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.main {
+    width: 100%;
+    height: 100%;
+}
+.navbar-container {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    border-top: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    padding-right: 90px;
+}
+.navbar-container h2 {
+    cursor: pointer;
+}
+.navbar-container h2:hover {
+    color: rgba(0, 0, 255, 0.4);
+}
+.apresentation-container {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    left: 10%;
+    top: 30%;
+    border-bottom: 2px solid white;
+}
+.apresentation-container h1 {
+    font-size: 50px;
+    margin: 0;
+}
+.apresentation-container p {
+    font-size: 20px;
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    flex-direction: column;
+    transition: 300ms all linear;
+}
+.project {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 50px;
+    transition: 300ms all linear;
+}
+.each-project {
+    width: 200px; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.each-project:hover {
+    transform: scale(1.05);
+    transition: all 300ms linear;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+.project-name {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+}
+.project-technologies {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.project-technologies span {
+    font-size: 13px;
+}
+.project-about {
+    width: 100%;
+    height: 100px;
+}
+.project-link {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.project-link a {
+    text-align: center;
+    text-decoration: none;
+    color: red;
+}
+.project-link a:hover {
+    color: blue;
+}
+.contact {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    height: 200px;
+    transition: 300ms all linear;
+}
+.contact a {
+    text-decoration: none;
+}
+.contact a:hover {
+    color: red;
+}
+.each-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.each-contact i {
+    transform: scale(5);
+}
+.each-contact span {
+    font-size: 20px;
+}
+
+
+.nav-current {
+    color: blue;
+}
+.off-show-anim {
+    animation-name: disappearing;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+}
+@keyframes disappearing {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.off-show {
+    display: none;
+    position: relative;
+    top: 200%;
+    transition: all 300ms linear;
+}
+
+.showing {
+    animation-name: appearing;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes appearing {
+    0% {
+        position: absolute;
+        left: 400%;
+    }
+    100% {
+        left: 0%;
+        position: relative;
+    }
+}
+
+
+.obs-project {
+    position: relative;
+    top: 80%;
+    text-wrap: nowrap;
+    font-size: 10px;
+
+}
+@media screen and (min-width: 1921px) {
+    .navbar-container {
+        width: 1200px;
+        font-size: 40px;
+        border-top: 4px solid white;
+    }
+    .apresentation-container {
+        height: 800px;
+        border-bottom: 4px solid white;
+    }
+    .apresentation-container h1 {
+        font-size: 80px;
+    }
+    .apresentation-container p {
+        font-size: 46px;
+    }
+    .project {
+        height: 800px;
+    }
+    .each-project {
+        width: 400px;
+        height: 700px;
+        font-size: 30px;
+    }
+    .project-name {
+        width: 200px;
+        height: 200px;
+        border: 3px solid;
+    }
+    .project-technologies {
+        height: 200px;
+    }
+    .project-technologies span {
+        font-size: 30px;
+    }
+    
+    .obs-project {
+        font-size: 25px;
+    }
+    .contact {
+        gap: 200px;
+    }
+    .each-contact {
+        gap: 100px;
+    }
+    .contact i {
+        transform: scale(10);
+    }
+    .each-contact span {
+        font-size: 35px;
+    } 
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+    .navbar-container {
+        width: 700px;
+        font-size: 25px;
+        border-top: 4px solid white;
+    }
+    .apresentation-container {
+        height: 500px;
+        border-bottom: 4px solid white;
+    }
+    .apresentation-container h1 {
+        font-size: 60px;
+    }
+    .apresentation-container p {
+        font-size: 30px;
+    }
+    .project {
+        height: 500px;
+    }
+    .each-project {
+        width: 250px;
+        height: 400px;
+        font-size: 23px;
+    }
+    .project-name {
+        width: 200px;
+        height: 200px;
+        border: 3px solid;
+    }
+    .project-technologies {
+        height: 200px;
+    }
+    .project-technologies span {
+        font-size: 20px;
+    }
+    
+    .obs-project {
+        font-size: 15px;
+    }
+    .contact {
+        gap: 150px;
+    }
+    .each-contact {
+        gap: 100px;
+    }
+    .contact i {
+        transform: scale(7);
+    }
+    .each-contact span {
+        font-size: 35px;
+    } 
+}
+
+
+@media screen and (min-width: 1020px) and (max-width: 1399.99px) {
+    .navbar-container {
+        width: 500px;
+        font-size: 20px;
+        border-top: 2px solid white;
+    }
+    .apresentation-container {
+        top: 20%;
+        height: 400px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid white;
+    }
+    .apresentation-container h1 {
+        font-size: 50px;
+    }
+    .apresentation-container p {
+        font-size: 25px;
+    }
+    .project {
+        height: 350px;
+    }
+    .each-project {
+        width: 150px;
+        height: 350px;
+        font-size: 15px;
+    }
+    .project-name {
+        width: 120px;
+        height: 120px;
+        border: 3px solid;
+    }
+    .project-technologies {
+        height: 100px;
+    }
+    .project-technologies span {
+        font-size: 15px;
+    }
+    .project-link {
+        height: 50px;
+    }
+    .obs-project {
+        font-size: 15px;
+    }
+    .contact {
+        gap: 100px;
+    }
+    .each-contact {
+        gap: 50px;
+    }
+    .contact i {
+        transform: scale(5);
+    }
+    .each-contact span {
+        font-size: 30px;
+    } 
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1019.99px) {
+    .navbar-container {
+        width: 250px;
+        font-size: 15px;
+        border-top: 2px solid white;
+    }
+    .apresentation-container {
+        top: 20%;
+        height: 300px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid white;
+    }
+    .apresentation-container h1 {
+        font-size: 35px;
+    }
+    .apresentation-container p {
+        font-size: 15px;
+    }
+    .project {
+        height: 350px;
+    }
+    .each-project {
+        width: 100px;
+        height: 250px;
+        font-size: 10px;
+    }
+    .project-name {
+        width: 70px;
+        height: 70px;
+        border: 2px solid;
+    }
+    .project-technologies {
+        height: 50px;
+    }
+    .project-technologies span {
+        font-size: 10px;
+    }
+    .project-about {
+        height: 50px;
+    }
+    .project-link {
+        height: 50px;
+        font-size: 12px;
+    }
+    .obs-project {
+        font-size: 10px;
+        top: 70%;
+    }
+    .contact {
+        gap: 50px;
+    }
+    .each-contact {
+        gap: 25px;
+    }
+    .contact i {
+        transform: scale(3);
+    }
+    .each-contact span {
+        font-size: 30px;
+    } 
+}
+
+
+@media screen and (max-width: 767.99px) {
+    body {
+        overflow: auto;
+    }
+    .navbar-container {
+        width: 100%;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 15px;
+        border-top: 2px solid white;
+    }
+    .apresentation-container {
+        text-align: center;
+        width: 320px;
+        margin: 0 auto;
+        left: 0px;
+        top: 20%;
+        height: auto;
+        padding: 0px !important;
+
+        word-break: break-all;
+        border-bottom: 0px solid white;
+    }
+    .apresentation-container h1 {
+        font-size: 35px;
+    }
+    .apresentation-container p {
+        font-size: 15px;
+    }
+    .project {
+        height: 350px;
+        flex-direction: column;
+    }
+    .each-project {
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+        font-size: 15px;
+    }
+    .project-name {
+        width: 100px;
+        height: 100px;
+        border: 2px solid;
+    }
+    .project-technologies {
+        height: 50px;
+    }
+    .project-technologies span {
+        font-size: 10px;
+    }
+    .project-about {
+        height: 50px;
+    }
+    .project-link {
+        height: 50px;
+        font-size: 12px;
+    }
+    .obs-project {
+        font-size: 15px;
+        top: 0px;
+    }
+    .contact {
+        gap: 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .each-contact {
+        gap: 25px;
+        flex-direction: row;
+        text-align: start;
+        justify-content: start;
+        
+    }
+    .contact i {
+        transform: scale(3);
+    }
+    .each-contact span {
+        font-size: 30px;
+    } 
+}
